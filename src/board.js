@@ -12,6 +12,7 @@ export class Board {
 
     flipTile(rowIndex, columnIndex) {
         if (this._playerBoard[rowIndex][columnIndex] !== ' ') {
+            console.log( 'This tile has already been flipped!');
             return;
         } else if (this._bombBoard[rowIndex][columnIndex] === 'B') {
             this._playerBoard[rowIndex][columnIndex] = 'B';
